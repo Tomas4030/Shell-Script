@@ -2,7 +2,7 @@
 
 for pasta1 in ./script_sample_folder/*; do
     # Repetir o processo para cada letra do alfabeto
-        nome=$(basename "$dir")
+        nome=$(basename "$pasta1")
          touch $pasta1/script_sample_folder-$nome.txt
     done
 
