@@ -13,7 +13,7 @@ if [ ! -d "$diretorio_base" ]; then
 fi
 
 for subdiretorio in "$diretorio_base"/*; do
-  if [ -d "$subdiretorio" ] && [[ "$subdiretorio" == *"$caractere"* ]]; then
+ if [ -d "$subdiretorio" ] && [[ "$(basename $subdiretorio)" == *"$caractere"* ]]; then
     echo "Deletando o conteúdo de: $subdiretorio"
     rm -rf "$subdiretorio"/*
   fi
